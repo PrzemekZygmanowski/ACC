@@ -1,0 +1,28 @@
+
+  $primaryColor: #296ca8;
+  $secondaryColor: #ffffff;
+  $thirdColor: #212121;
+  $transition: 0.3s ease-in-out;
+  $fontFamily: 'Baloo Tamma 2', cursive;
+
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $primaryColor;
+  font-family: $fontFamily
+}
+
+h1,
+h2,
+h3 {
+  color: var(--primaryColor);
+  text-align: center;
+}
+
+p {
+  color: var(--thirdColor);
+}

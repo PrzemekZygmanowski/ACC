@@ -1,0 +1,25 @@
+@import '/src/styles.scss';
+
+.mainBtn {
+  background-color: $primaryColor;
+  color: $secondaryColor;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  min-width: 25%;
+  min-height: 40px;
+  cursor: pointer;
+  margin: 10px auto;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5)}
+
+.iconBtn {
+    cursor: pointer;
+    font-size: 24px;
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    outline: none;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5)}
