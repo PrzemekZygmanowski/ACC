@@ -1,0 +1,15 @@
+// .startDialog,
+// .startHelpDialog {
+//   transition-delay: 0.15s;
+ 
+// }
+.startDialog--active-false, .startHelpDialog--active-false
+ {
+  transform: scale(0)
+}
+
+
+.startDialog--active-true, .startHelpDialog--active-true
+ {
+  transform: scale(1)
+}

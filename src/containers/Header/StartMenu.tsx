@@ -1,10 +1,11 @@
 import React from "react";
+import "../../styles/Dialog.scss";
 import { Dialog, Button, ButtonIcon } from "../../commons";
 import {
   DialogHeader,
   DialogContent,
   DialogFooter
-} from "../../commons/Dialog";
+} from "../../commons/dialog";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 
 const StartMenu = ({ isOpen, onClick }: any) => {
@@ -14,10 +15,25 @@ const StartMenu = ({ isOpen, onClick }: any) => {
 
   return (
     <Dialog className={`startDialog startDialog--active-${isOpen}`}>
-      <ButtonIcon className="iconBtn" onClick={onClick} icon={faTimesCircle} />
-      <Button className="mainBtn" label="Zaczynamy" onClick={openDialog} />
-      <Button className="mainBtn" label="Zaczynamy" onClick={openDialog} />
-      <Button className="mainBtn" label="Zaczynamy" onClick={openDialog} />
+      <DialogHeader title="zaczynamy">
+        <ButtonIcon
+          className="iconBtn"
+          onClick={onClick}
+          icon={faTimesCircle}
+        />
+      </DialogHeader>
+      <DialogContent>
+        <Button className="mainBtn" label="Zaczynamy" onClick={openDialog} />
+        <Button className="mainBtn" label="Zaczynamy" onClick={openDialog} />
+        <Button className="mainBtn" label="Zaczynamy" onClick={openDialog} />
+      </DialogContent>
+      <DialogFooter>
+        <ButtonIcon
+          className="iconBtn"
+          onClick={onClick}
+          icon={faTimesCircle}
+        />
+      </DialogFooter>
     </Dialog>
   );
 };

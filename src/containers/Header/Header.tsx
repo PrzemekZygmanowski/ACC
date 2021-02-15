@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Header.scss";
+import "../../styles/Header.scss";
 import { Button, ButtonIcon } from "../../commons";
 import { StartMenu, StartHelpDialog } from "../";
 import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
@@ -14,9 +14,11 @@ const Header = () => {
     setHelpDialogOpen(!isHelpDialogOpen);
   };
   return (
-    <>
-      <h1>Kalkulator Zysków Ciepła</h1>
-      <h2>Oblicz jaką moc powinien mieć Twój klimatyzator</h2>
+    <header className="header">
+      <h1 className="header__h1">Kalkulator Zysków Ciepła</h1>
+      <h2 className="header__h2">
+        Oblicz jaką moc powinien mieć Twój klimatyzator
+      </h2>
       <Button className="mainBtn" label="Zaczynamy" onClick={openStartDialog} />
       <ButtonIcon
         className="iconBtn"
@@ -25,7 +27,7 @@ const Header = () => {
       />
       <StartMenu isOpen={isMenuOpen} onClick={openStartDialog} />
       <StartHelpDialog isOpen={isHelpDialogOpen} onClick={openHelpDialog} />
-    </>
+    </header>
   );
 };
 
