@@ -1,5 +1,5 @@
 import React from "react";
-import { Dialog, ButtonIcon } from "../../commons";
+import { HelpDialog, ButtonIcon } from "../../commons";
 import {
   DialogHeader,
   DialogContent,
@@ -7,9 +7,9 @@ import {
 } from "../../commons/dialog";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 
-const StartHelpDialog = ({ isOpen, onClick }: any) => {
+const HeaderHelpDialog = ({ isOpen, onClick }: any) => {
   return (
-    <Dialog className={`startHelpDialog startHelpDialog--active-${isOpen}`}>
+    <HelpDialog className={`startHelpDialog startHelpDialog--active-${isOpen}`}>
       <DialogHeader title="Cześć">
         {" "}
         <ButtonIcon
@@ -34,8 +34,8 @@ const StartHelpDialog = ({ isOpen, onClick }: any) => {
         <p>pozdrawiam</p>
         <h3>Przemek Zygmanowski</h3>
       </DialogFooter>
-    </Dialog>
+    </HelpDialog>
   );
 };
 
-export default StartHelpDialog;
+export default HeaderHelpDialog;

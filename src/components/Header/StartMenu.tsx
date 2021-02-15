@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/Dialog.scss";
 import { Dialog, Button, ButtonIcon } from "../../commons";
+import { StartHelpDialog } from "../";
 import {
   DialogHeader,
   DialogContent,
   DialogFooter
 } from "../../commons/dialog";
-import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
+import {
+  faTimesCircle,
+  faQuestionCircle
+} from "@fortawesome/free-solid-svg-icons";
 
 const StartMenu = ({ isOpen, onClick }: any) => {
+  const [isStartHelpDialogOpen, setStartHelpDialogOpen] = useState(false);
+
+  const openStartHelpDialog = () => {
+    setStartHelpDialogOpen(!isStartHelpDialogOpen);
+  };
   const openDialog = () => {
     console.log("open dialog");
   };
@@ -44,10 +53,14 @@ const StartMenu = ({ isOpen, onClick }: any) => {
       <DialogFooter>
         <ButtonIcon
           className="iconBtn"
-          onClick={onClick}
-          icon={faTimesCircle}
+          onClick={openStartHelpDialog}
+          icon={faQuestionCircle}
         />
       </DialogFooter>
+      <StartHelpDialog
+        isOpen={isStartHelpDialogOpen}
+        onClick={openStartHelpDialog}
+      />
     </Dialog>
   );
 };

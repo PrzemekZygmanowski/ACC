@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../styles/Header.scss";
 import { Button, ButtonIcon } from "../../commons";
-import { StartMenu, StartHelpDialog } from "../";
+import { StartMenu, HeaderHelpDialog } from "../";
 import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
@@ -26,7 +26,7 @@ const Header = () => {
         icon={faQuestionCircle}
       />
       <StartMenu isOpen={isMenuOpen} onClick={openStartDialog} />
-      <StartHelpDialog isOpen={isHelpDialogOpen} onClick={openHelpDialog} />
+      <HeaderHelpDialog isOpen={isHelpDialogOpen} onClick={openHelpDialog} />
     </header>
   );
 };
