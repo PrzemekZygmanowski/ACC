@@ -5,7 +5,8 @@ const DialogHeaderS: CSS.Properties = {
   display: "flex"
 };
 const IconsS: CSS.Properties = {
-  color: "red"
+  position: "fixed",
+  right: "5%"
 };
 
 interface DialogHeaderT {

@@ -3,9 +3,9 @@ import { Header as HeaderComponent } from "../containers";
 
 const Header = () => {
   return (
-    <header>
+    <>
       <HeaderComponent />
-    </header>
+    </>
   );
 };
 
