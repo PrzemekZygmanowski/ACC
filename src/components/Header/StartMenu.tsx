@@ -30,7 +30,7 @@ const StartMenu = ({ isOpen, onClick }: any) => {
 
   return (
     <Dialog className={`startDialog startDialog--active-${isOpen}`}>
-      <DialogHeader title='Zaczynamy'>
+      <DialogHeader title='Zaczynamy' isButton>
         <ButtonIcon
           className='iconBtn'
           onClick={onClick}
@@ -47,7 +47,11 @@ const StartMenu = ({ isOpen, onClick }: any) => {
           <NavLink className='mainBtn' label='Zarejestruj się' to='/signUp' />
           <h3>Stwórz projekt</h3>
           <p>Jeżeli chcesz szybko coś policzyć</p>
-          <NavLink className='mainBtn' label='Stwórz projekt' to='newProject' />
+          <NavLink
+            className='mainBtn'
+            label='Stwórz projekt'
+            to='/newProject'
+          />
         </NavMenu>
       </DialogContent>
       <DialogFooter>

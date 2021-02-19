@@ -6,7 +6,7 @@ import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 const StartHelpDialog = ({ isOpen, onClick }: any) => {
   return (
     <HelpDialog className={`startHelpDialog startHelpDialog--active-${isOpen}`}>
-      <DialogHeader title='Pomoc'>
+      <DialogHeader title='Pomoc' isButton>
         {' '}
         <ButtonIcon
           className='iconBtn'

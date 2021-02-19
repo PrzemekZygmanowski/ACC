@@ -10,13 +10,14 @@ const IconsS: CSS.Properties = {
   right: '5%',
 };
 
-const DialogHeader = ({ title, children }: DialogHeaderT) => {
+const DialogHeader = ({ title, children, isButton }: DialogHeaderT) => {
   return (
     <div style={DialogHeaderS}>
       <div>
         <h2>{title}</h2>
       </div>
-      <div style={IconsS}>{children}</div>
+      {isButton ? <div style={IconsS}>{children}</div> : <></>}
+      {/* <div style={IconsS}>{children}</div> */}
     </div>
   );
 };

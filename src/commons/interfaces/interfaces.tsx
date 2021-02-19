@@ -23,7 +23,8 @@ export interface ChildrenT {
 
 export interface DialogHeaderT {
   title: string;
-  readonly children: ReactNode;
+  readonly children?: ReactNode;
+  isButton: boolean;
 }
 
 export interface MenuProps {

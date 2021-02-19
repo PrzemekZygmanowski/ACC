@@ -1,10 +1,8 @@
-import React from "react";
+import React from 'react';
+import { NotFound as NotFoundComponent } from '../components';
 
-const styles = {
-  color: "red"
-};
 const NotFound = () => {
-  return <h1 style={styles}>404 sorry but page doesn't exist</h1>;
+  return <NotFoundComponent />;
 };
 
 export default NotFound;
