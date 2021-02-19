@@ -1,31 +1,38 @@
-import { MouseEvent, ReactNode } from "react";
-import { CSSProperties } from "csstype";
+import { MouseEvent, ReactNode } from 'react';
+// import { CSSProperties } from 'csstype';
 
-interface ButtonT {
+export interface ButtonT {
   className: string;
   label: string;
-  onClick: MouseEvent<HTMLButtonElement, MouseEvent>;
+  onClick: () => void;
 }
 
-interface ButtonIconT {
+export interface ButtonIconT {
   className: string;
   icon: any;
-  onClick: MouseEvent<HTMLButtonElement, MouseEvent>;
+  onClick: () => void;
 }
 
-interface DialogT {
+export interface DialogT {
+  readonly children: ReactNode;
   className: string;
+}
+export interface ChildrenT {
   readonly children: ReactNode;
 }
 
-interface MenuProps {
+export interface DialogHeaderT {
+  title: string;
   readonly children: ReactNode;
-  styles: CSSProperties | undefined;
 }
 
-interface NavLinkT {
+export interface MenuProps {
+  readonly children: ReactNode;
+  className: string;
+}
+
+export interface NavLinkT {
   className: string;
   label: string;
   to: string;
 }
-export { ButtonT, ButtonIconT, DialogT, MenuProps, NavLinkT };

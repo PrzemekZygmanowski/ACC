@@ -1,25 +1,25 @@
-import React from "react";
-import { HelpDialog, ButtonIcon } from "../../commons";
+import React from 'react';
+import { HelpDialog, ButtonIcon } from '../../commons';
 import {
   DialogHeader,
   DialogContent,
-  DialogFooter
-} from "../../commons/dialog";
-import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
+  DialogFooter,
+} from '../../commons/dialog/';
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 const HeaderHelpDialog = ({ isOpen, onClick }: any) => {
   return (
     <HelpDialog className={`startHelpDialog startHelpDialog--active-${isOpen}`}>
-      <DialogHeader title="Cześć">
-        {" "}
+      <DialogHeader title='Cześć'>
+        {' '}
         <ButtonIcon
-          className="iconBtn"
+          className='iconBtn'
           onClick={onClick}
           icon={faTimesCircle}
         />
       </DialogHeader>
       <DialogContent>
-        {" "}
+        {' '}
         <p>
           Chciałbym zademonstrować swój projekt kalkulatora zysków ciepła
           wspomagającego projektowanie instalacji klimatyzacji dla wszelakich
@@ -30,7 +30,7 @@ const HeaderHelpDialog = ({ isOpen, onClick }: any) => {
         </p>
       </DialogContent>
       <DialogFooter>
-        {" "}
+        {' '}
         <p>pozdrawiam</p>
         <h3>Przemek Zygmanowski</h3>
       </DialogFooter>

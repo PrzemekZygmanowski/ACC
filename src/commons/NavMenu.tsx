@@ -1,9 +1,8 @@
-import React from "react";
-import { MenuProps } from "./interfaces/interfaces";
-import { CSSProperties } from "csstype";
+import React from 'react';
+import { MenuProps } from './interfaces/interfaces';
 
-const NavMenu = ({ children, styles }: MenuProps) => {
-  return <nav style={styles}>{children}</nav>;
+const NavMenu = ({ children, className }: MenuProps) => {
+  return <nav className={className}>{children}</nav>;
 };
 
 export default NavMenu;

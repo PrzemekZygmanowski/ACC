@@ -1,10 +1,7 @@
-import React, { ReactNode } from "react";
+import React from 'react';
+import { ChildrenT } from '../interfaces/interfaces';
 
-interface DialogFooterT {
-  readonly children: ReactNode;
-}
-
-const DialogFooter = ({ children }: DialogFooterT) => {
+const DialogFooter = ({ children }: ChildrenT) => {
   return <div>{children}</div>;
 };
 

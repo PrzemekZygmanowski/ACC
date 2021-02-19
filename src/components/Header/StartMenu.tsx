@@ -1,22 +1,23 @@
-import React, { useState } from "react";
-import "../../styles/Dialog.scss";
-import { Dialog, Button, ButtonIcon, NavLink, NavMenu } from "../../commons";
-import { StartHelpDialog } from "../";
+import React, { useState } from 'react';
+import '../../styles/Dialog.scss';
+import { Dialog, Button, ButtonIcon, NavLink, NavMenu } from '../../commons';
+import { StartHelpDialog } from '../';
 import {
   DialogHeader,
   DialogContent,
-  DialogFooter
-} from "../../commons/dialog";
+  DialogFooter,
+} from '../../commons/dialog/';
 import {
   faTimesCircle,
-  faQuestionCircle
-} from "@fortawesome/free-solid-svg-icons";
+  faQuestionCircle,
+} from '@fortawesome/free-solid-svg-icons';
 
 const menuS = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center"
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
 };
+
 const StartMenu = ({ isOpen, onClick }: any) => {
   const [isStartHelpDialogOpen, setStartHelpDialogOpen] = useState(false);
 
@@ -24,34 +25,34 @@ const StartMenu = ({ isOpen, onClick }: any) => {
     setStartHelpDialogOpen(!isStartHelpDialogOpen);
   };
   const openDialog = () => {
-    console.log("open dialog");
+    console.log('open dialog');
   };
 
   return (
     <Dialog className={`startDialog startDialog--active-${isOpen}`}>
-      <DialogHeader title="Zaczynamy">
+      <DialogHeader title='Zaczynamy'>
         <ButtonIcon
-          className="iconBtn"
+          className='iconBtn'
           onClick={onClick}
           icon={faTimesCircle}
         />
       </DialogHeader>
       <DialogContent>
-        <NavMenu styles={menuS}>
+        <NavMenu className=''>
           <h3>Zaloguj się</h3>
           <p>Jeśli chcesz korzystać ze wszystkich dobrodziejstw aplikacji</p>
-          <NavLink className="mainBtn" label="Zaloguj się" to="/logIn" />
+          <NavLink className='mainBtn' label='Zaloguj się' to='/logIn' />
           <h3>Zarejestruj się</h3>
           <p>Jeżeli nigdy tego nie robiłeś</p>
-          <NavLink className="mainBtn" label="Zarejestruj się" to="/signUp" />
+          <NavLink className='mainBtn' label='Zarejestruj się' to='/signUp' />
           <h3>Stwórz projekt</h3>
           <p>Jeżeli chcesz szybko coś policzyć</p>
-          <NavLink className="mainBtn" label="Stwórz projekt" to="newProject" />
+          <NavLink className='mainBtn' label='Stwórz projekt' to='newProject' />
         </NavMenu>
       </DialogContent>
       <DialogFooter>
         <ButtonIcon
-          className="iconBtn"
+          className='iconBtn'
           onClick={openStartHelpDialog}
           icon={faQuestionCircle}
         />

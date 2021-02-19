@@ -1,18 +1,14 @@
-import React, { ReactNode } from "react";
-import CSS from "csstype";
+import React from 'react';
+import CSS from 'csstype';
+import { DialogHeaderT } from '../interfaces/interfaces';
 
 const DialogHeaderS: CSS.Properties = {
-  display: "flex"
+  display: 'flex',
 };
 const IconsS: CSS.Properties = {
-  position: "fixed",
-  right: "5%"
+  position: 'fixed',
+  right: '5%',
 };
-
-interface DialogHeaderT {
-  title: string;
-  readonly children: ReactNode;
-}
 
 const DialogHeader = ({ title, children }: DialogHeaderT) => {
   return (
