@@ -1,5 +1,5 @@
 import React from 'react';
-import { NewProject as NewProjectComponent } from '../components';
+import { NewProject as NewProjectComponent } from '../domain';
 
 const NewProject = () => {
   return (

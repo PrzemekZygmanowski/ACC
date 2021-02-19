@@ -1,11 +1,10 @@
+$primaryColor: #296ca8;
+$secondaryColor: #ffffff;
+$thirdColor: #212121;
+$transition: 0.3s ease-in-out;
+$fontFamily: 'Baloo Tamma 2', cursive;
 
-  $primaryColor: #296ca8;
-  $secondaryColor: #ffffff;
-  $thirdColor: #212121;
-  $transition: 0.3s ease-in-out;
-  $fontFamily: 'Baloo Tamma 2', cursive;
-
-  @import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +12,8 @@
 }
 body {
   background-color: $primaryColor;
-  font-family: $fontFamily
+  // background-image: url('../public/Data/img/snowflake.png');
+  font-family: $fontFamily;
 }
 
 h1,

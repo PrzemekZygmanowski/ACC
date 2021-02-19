@@ -1,4 +1,5 @@
-import { MouseEvent, ReactNode } from 'react';
+import { ReactNode } from 'react';
+import { FieldHookConfig } from 'formik';
 // import { CSSProperties } from 'csstype';
 
 export interface ButtonT {
@@ -36,4 +37,13 @@ export interface NavLinkT {
   className: string;
   label: string;
   to: string;
+}
+
+export interface TextInputT {
+  label: string;
+  name: string;
+  placeholder: string;
+  // htmlFor: string;
+  type: string;
+  props?: FieldHookConfig<string>;
 }
