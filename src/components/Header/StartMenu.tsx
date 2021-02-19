@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../styles/Dialog.scss";
-import { Dialog, Button, ButtonIcon } from "../../commons";
+import { Dialog, Button, ButtonIcon, NavLink, NavMenu } from "../../commons";
 import { StartHelpDialog } from "../";
 import {
   DialogHeader,
@@ -12,6 +12,11 @@ import {
   faQuestionCircle
 } from "@fortawesome/free-solid-svg-icons";
 
+const menuS = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center"
+};
 const StartMenu = ({ isOpen, onClick }: any) => {
   const [isStartHelpDialogOpen, setStartHelpDialogOpen] = useState(false);
 
@@ -32,23 +37,17 @@ const StartMenu = ({ isOpen, onClick }: any) => {
         />
       </DialogHeader>
       <DialogContent>
-        <h3>Zaloguj się</h3>
-        <p>Jeśli chcesz korzystać ze wszystkich dobrodziejstw aplikacji</p>
-        <Button className="mainBtn" label="Zaloguj się" onClick={openDialog} />
-        <h3>Zarejestruj się</h3>
-        <p>Jeżeli nigdy tego nie robiłeś</p>
-        <Button
-          className="mainBtn"
-          label="Zarejestruj się"
-          onClick={openDialog}
-        />
-        <h3>Stwórz projekt</h3>
-        <p>Jeżeli chcesz szybko coś policzyć</p>
-        <Button
-          className="mainBtn"
-          label="Stwórz projekt"
-          onClick={openDialog}
-        />
+        <NavMenu styles={menuS}>
+          <h3>Zaloguj się</h3>
+          <p>Jeśli chcesz korzystać ze wszystkich dobrodziejstw aplikacji</p>
+          <NavLink className="mainBtn" label="Zaloguj się" to="/logIn" />
+          <h3>Zarejestruj się</h3>
+          <p>Jeżeli nigdy tego nie robiłeś</p>
+          <NavLink className="mainBtn" label="Zarejestruj się" to="/signUp" />
+          <h3>Stwórz projekt</h3>
+          <p>Jeżeli chcesz szybko coś policzyć</p>
+          <NavLink className="mainBtn" label="Stwórz projekt" to="newProject" />
+        </NavMenu>
       </DialogContent>
       <DialogFooter>
         <ButtonIcon
