@@ -17,7 +17,6 @@ const DialogHeader = ({ title, children, isButton }: DialogHeaderT) => {
         <h2>{title}</h2>
       </div>
       {isButton ? <div style={IconsS}>{children}</div> : <></>}
-      {/* <div style={IconsS}>{children}</div> */}
     </div>
   );
 };

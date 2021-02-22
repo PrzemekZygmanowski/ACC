@@ -1,25 +1,31 @@
 @import '/src/styles.scss';
 
-.mainBtn {
+.mainBtn,
+.linkBtn,
+.submitBtn {
   background-color: $primaryColor;
   color: $secondaryColor;
+  text-decoration: none;
   outline: none;
   border: none;
   border-radius: 5px;
   min-width: 25%;
-  min-height: 40px;
+  min-height: 25px;
+  padding: 2px 15px 2px 15px;
   cursor: pointer;
   margin: 10px auto;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.5)}
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
 
 .iconBtn {
-    cursor: pointer;
-    font-size: 24px;
-    background-color: $primaryColor;
-    color: $secondaryColor;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    outline: none;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.5)}
+  cursor: pointer;
+  font-size: 24px;
+  background-color: $primaryColor;
+  color: $secondaryColor;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  outline: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}

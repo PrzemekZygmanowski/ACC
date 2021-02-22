@@ -1,4 +1,6 @@
-import React, { FC } from 'react';
+import React from 'react';
+import '../../../commons/MenuStyle.scss';
+import '../../../styles/Form.scss';
 import { Formik, Form } from 'formik';
 import {
   TextInput,
@@ -26,8 +28,8 @@ const NewProjectForm = () => {
           console.log(values);
         }}
       >
-        <Form>
-          <InputWrapper className=''>
+        <Form className='form_container'>
+          <InputWrapper className='input_wrapper'>
             <Label label='Nazwa projektu' name='projectTitle' />
             <TextInput
               name='projectTitle'
@@ -35,7 +37,7 @@ const NewProjectForm = () => {
               placeholder='Nazwa projektu'
             />
           </InputWrapper>
-          <InputWrapper className=''>
+          <InputWrapper className='input_wrapper'>
             <Label
               label='Najbliższa stacja meterologiczna'
               name='weatherStation'
@@ -46,7 +48,7 @@ const NewProjectForm = () => {
               placeholder='Najbliższa stacja meterologiczna'
             />
           </InputWrapper>
-          <SubmitButton className='' type='submit' label='Zapisz' />
+          <SubmitButton className='submitBtn' type='submit' label='Zapisz' />
         </Form>
 
         {/* <Button className='' onClick={onSubmit} label='Zapisz'></Button> */}

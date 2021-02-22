@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../../styles/Dialog.scss';
+import '../../commons/MenuStyle.scss';
 import { Dialog, ButtonIcon, NavLink, NavMenu } from '../../commons';
 import { StartHelpDialog } from '..';
 import {
@@ -11,12 +12,6 @@ import {
   faTimesCircle,
   faQuestionCircle,
 } from '@fortawesome/free-solid-svg-icons';
-
-const menuS = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-};
 
 const StartMenu = ({ isOpen, onClick }: any) => {
   const [isStartHelpDialogOpen, setStartHelpDialogOpen] = useState(false);
@@ -38,17 +33,17 @@ const StartMenu = ({ isOpen, onClick }: any) => {
         />
       </DialogHeader>
       <DialogContent>
-        <NavMenu className=''>
+        <NavMenu className='startMenu'>
           <h3>Zaloguj się</h3>
           <p>Jeśli chcesz korzystać ze wszystkich dobrodziejstw aplikacji</p>
-          <NavLink className='mainBtn' label='Zaloguj się' to='/logIn' />
+          <NavLink className='linkBtn' label='Zaloguj się' to='/logIn' />
           <h3>Zarejestruj się</h3>
           <p>Jeżeli nigdy tego nie robiłeś</p>
-          <NavLink className='mainBtn' label='Zarejestruj się' to='/signUp' />
+          <NavLink className='linkBtn' label='Zarejestruj się' to='/signUp' />
           <h3>Stwórz projekt</h3>
           <p>Jeżeli chcesz szybko coś policzyć</p>
           <NavLink
-            className='mainBtn'
+            className='linkBtn'
             label='Stwórz projekt'
             to='/newProject'
           />
