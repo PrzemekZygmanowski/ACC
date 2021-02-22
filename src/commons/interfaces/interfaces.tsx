@@ -1,5 +1,4 @@
-import { ReactNode } from 'react';
-import { FieldHookConfig } from 'formik';
+import { CSSProperties, ReactNode } from 'react';
 // import { CSSProperties } from 'csstype';
 
 export interface ButtonT {
@@ -14,6 +13,11 @@ export interface ButtonIconT {
   onClick: () => void;
 }
 
+export interface SubmitT {
+  className: string;
+  label: string;
+  type: 'button' | 'submit' | 'reset';
+}
 export interface DialogT {
   readonly children: ReactNode;
   className: string;
@@ -32,6 +36,10 @@ export interface MenuProps {
   readonly children: ReactNode;
   className: string;
 }
+export interface InputWrapperT {
+  readonly children: ReactNode;
+  className: string;
+}
 
 export interface NavLinkT {
   className: string;
@@ -39,11 +47,7 @@ export interface NavLinkT {
   to: string;
 }
 
-export interface TextInputT {
+export interface LabelT {
   label: string;
   name: string;
-  placeholder: string;
-  // htmlFor: string;
-  type: string;
-  props?: FieldHookConfig<string>;
 }

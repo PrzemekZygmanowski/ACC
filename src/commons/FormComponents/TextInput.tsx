@@ -1,13 +1,10 @@
 import React from 'react';
-import { useField } from 'formik';
-import { TextInputT } from '../interfaces/interfaces';
+import { useField, FieldHookConfig } from 'formik';
 
-const TextInput = ({ label, props }: TextInputT) => {
-  //
+const TextInput = (props: FieldHookConfig<string>) => {
   const [field, meta] = useField(props);
   return (
     <>
-      <label htmlFor={props.name}>{label}</label>
       <input
         className='text_input'
         {...field}

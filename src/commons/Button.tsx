@@ -1,5 +1,4 @@
 import React from 'react';
-import './Buttons.scss';
 import { ButtonT } from './interfaces/interfaces';
 
 const Button = ({ className, onClick, label }: ButtonT) => {
