@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../../styles/Dialog.scss';
 import { Dialog, Button, ButtonIcon } from '../../commons';
 import NewProjectForm from './components/NewProjectForm';
+import NewRoomForm from './components/NewRoomForm';
 import {
   DialogHeader,
   DialogContent,
@@ -30,6 +31,7 @@ const NewProject = () => {
       </DialogHeader>
       <DialogContent>
         <NewProjectForm />
+        <NewRoomForm />
       </DialogContent>
       <DialogFooter>
         <ButtonIcon

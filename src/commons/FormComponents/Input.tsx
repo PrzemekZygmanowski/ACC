@@ -1,7 +1,7 @@
 import React from 'react';
 import { useField, FieldHookConfig } from 'formik';
 
-const TextInput = (props: FieldHookConfig<string>) => {
+const Input = (props: FieldHookConfig<string>) => {
   const [field, meta] = useField(props);
   return (
     <>
@@ -18,4 +18,4 @@ const TextInput = (props: FieldHookConfig<string>) => {
   );
 };
 
-export default TextInput;
+export default Input;

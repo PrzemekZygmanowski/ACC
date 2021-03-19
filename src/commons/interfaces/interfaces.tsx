@@ -47,6 +47,12 @@ export interface NavLinkT {
   to: string;
 }
 
+export interface LinkIconT {
+  className: string;
+  to: string;
+  icon: any;
+}
+
 export interface LabelT {
   label: string;
   name: string;

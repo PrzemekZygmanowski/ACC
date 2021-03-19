@@ -3,7 +3,7 @@ import '../../../commons/MenuStyle.scss';
 import '../../../styles/Form.scss';
 import { Formik, Form } from 'formik';
 import {
-  TextInput,
+  Input,
   Label,
   InputWrapper,
   SubmitButton,
@@ -31,7 +31,7 @@ const NewProjectForm = () => {
         <Form className='form_container'>
           <InputWrapper className='input_wrapper'>
             <Label label='Nazwa projektu' name='projectTitle' />
-            <TextInput
+            <Input
               name='projectTitle'
               type='text'
               placeholder='Nazwa projektu'
@@ -42,7 +42,7 @@ const NewProjectForm = () => {
               label='Najbliższa stacja meterologiczna'
               name='weatherStation'
             />
-            <TextInput
+            <Input
               name='weatherStation'
               type='text'
               placeholder='Najbliższa stacja meterologiczna'
@@ -50,8 +50,6 @@ const NewProjectForm = () => {
           </InputWrapper>
           <SubmitButton className='submitBtn' type='submit' label='Zapisz' />
         </Form>
-
-        {/* <Button className='' onClick={onSubmit} label='Zapisz'></Button> */}
       </Formik>
     </>
   );
