@@ -3,6 +3,7 @@ import '../../styles/Dialog.scss';
 import { Dialog, Button, ButtonIcon } from '../../commons';
 import NewProjectForm from './components/NewProjectForm';
 import NewRoomForm from './components/NewRoomForm';
+import RoomList from './container/RoomList';
 import {
   DialogHeader,
   DialogContent,
@@ -12,6 +13,7 @@ import {
   faTimesCircle,
   faQuestionCircle,
 } from '@fortawesome/free-solid-svg-icons';
+import Room from './components/Room';
 
 const NewProject = () => {
   const onClick = () => {
@@ -32,6 +34,7 @@ const NewProject = () => {
       <DialogContent>
         <NewProjectForm />
         <NewRoomForm />
+        <RoomList />
       </DialogContent>
       <DialogFooter>
         <ButtonIcon

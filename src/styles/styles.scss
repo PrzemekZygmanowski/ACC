@@ -1,0 +1,42 @@
+@import '/src/styles.scss';
+.rooms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $secondaryColor;
+  width: 100%;
+
+  .room {
+    position: relative;
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    width: 80%;
+    border-radius: 25px;
+    font-size: 14px;
+    height: 32px;
+    line-height: 32px;
+    margin: 3px;
+
+    .room span {
+      padding-left: 10px;
+    }
+    .edit-room-btn,
+    .delete-room-btn {
+      position: absolute;
+      // top: 0;
+      background-color: $primaryColor;
+      color: $secondaryColor;
+      border: none;
+      font-size: 16px;
+    }
+
+    .delete-room-btn {
+      right: 10px;
+    }
+
+    .edit-room-btn {
+      right: 30px;
+    }
+  }
+}

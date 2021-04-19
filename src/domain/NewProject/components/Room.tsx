@@ -1,6 +1,7 @@
 import React from 'react';
 import { LinkIcon, ButtonIcon } from '../../../commons';
 import { faCog, faTrash } from '@fortawesome/free-solid-svg-icons';
+import '../../../styles/styles.scss';
 
 interface RoomT {
   id: number;
@@ -10,15 +11,15 @@ interface RoomT {
 }
 const Room = ({ id, name, area, temperature }: RoomT) => {
   return (
-    <li>
+    <li className='room'>
       <span>{id}</span>
       <span>{name}</span>
       <span>{area}</span>
       <span>{temperature}</span>
       <div>
-        <LinkIcon className='' to='/' icon={faCog} />
+        <LinkIcon className='edit-room-btn' to='/' icon={faCog} />
         <ButtonIcon
-          className=''
+          className='delete-room-btn'
           onClick={() => {
             console.log('usun');
           }}

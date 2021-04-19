@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import '../../../commons/MenuStyle.scss';
 import '../../../styles/Form.scss';
 import { Formik, Form } from 'formik';
@@ -7,18 +7,33 @@ import {
   Label,
   InputWrapper,
   SubmitButton,
+  Select,
 } from '../../../commons/FormComponents';
 
+export interface newProjectFormT {
+  values: myFormValues;
+  onSubmit: (values: myFormValues) => void;
+}
 interface myFormValues {
   projectTitle: string;
   weatherStation: string;
 }
 
+interface cityT {
+  id: number;
+  name: string;
+}
 const InputS = {
   display: 'flex',
   flexDirection: 'column',
 };
-const NewProjectForm = () => {
+const cities = [
+  { id: 1, name: 'Łódź' },
+  { id: 2, name: 'Gdańsk' },
+  { id: 3, name: 'Toruń' },
+];
+
+const NewProjectForm: FC<newProjectFormT> = () => {
   const initialValues: myFormValues = { projectTitle: '', weatherStation: '' };
   return (
     <>
@@ -42,11 +57,12 @@ const NewProjectForm = () => {
               label='Najbliższa stacja meterologiczna'
               name='weatherStation'
             />
-            <Input
-              name='weatherStation'
-              type='text'
-              placeholder='Najbliższa stacja meterologiczna'
-            />
+            <Select name='weatherStation'>
+              <option value=''>Najbliższa stacja meterologiczna</option>
+              {cities.map((city: cityT) => {
+                return <option value={city.name}>{city.name}</option>;
+              })}
+            </Select>
           </InputWrapper>
           <SubmitButton className='submitBtn' type='submit' label='Zapisz' />
         </Form>

@@ -6,7 +6,6 @@ import {
   InputWrapper,
   SubmitButton,
 } from '../../../commons/FormComponents';
-import { Slider } from '@material-ui/core';
 
 interface myFormValues {
   roomName: string;

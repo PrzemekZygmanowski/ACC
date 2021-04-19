@@ -1,5 +1,5 @@
 import React from 'react';
-import RoomList from '../components/RoomList';
+import { RoomList as RoomListComponent } from '../components';
 
 const rooms = [
   { id: 1, roomName: 'kuchnia', roomArea: 5, roomTemperature: 24 },
@@ -8,7 +8,7 @@ const rooms = [
 ];
 
 const RoomList = () => {
-  return <RoomList rooms={rooms} />;
+  return <RoomListComponent rooms={rooms} />;
 };
 
 export default RoomList;
