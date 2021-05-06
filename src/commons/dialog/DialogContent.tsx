@@ -11,8 +11,6 @@ const DialogContentS: CSS.Properties = {
   width: '100%',
 };
 
-const DialogContent = ({ children }: ChildrenT) => {
+export const DialogContent = ({ children }: ChildrenT) => {
   return <div style={DialogContentS}>{children}</div>;
 };
-
-export default DialogContent;

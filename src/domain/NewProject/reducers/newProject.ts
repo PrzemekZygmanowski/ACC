@@ -1,5 +1,6 @@
 import { ProjectValues, NewProjectAction } from '../interfaces';
 import { NEW_PROJECT } from './newProjectActions';
+import { AnyAction } from 'redux';
 
 const initialState = {
   id: '',
@@ -9,7 +10,7 @@ const initialState = {
 
 export default (
   state: ProjectValues = initialState,
-  action: NewProjectAction
+  action: AnyAction
 ): ProjectValues => {
   switch (action.type) {
     case NEW_PROJECT: {

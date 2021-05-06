@@ -30,16 +30,14 @@ const cities = [
   { id: 3, name: 'Toruń' },
 ];
 
-const NewProjectForm: FC<newProjectFormT> = () => {
+export const NewProjectForm: FC<newProjectFormT> = ({
+  values,
+  onSubmit,
+}: newProjectFormT) => {
   const initialValues: ProjectValues = { projectTitle: '', weatherStation: '' };
   return (
     <>
-      <Formik
-        initialValues={initialValues}
-        onSubmit={(values) => {
-          console.log(values);
-        }}
-      >
+      <Formik initialValues={values || initialValues} onSubmit={onSubmit}>
         <Form className='form_container'>
           <InputWrapper className='input_wrapper'>
             <Label label='Nazwa projektu' name='projectTitle' />
@@ -67,5 +65,3 @@ const NewProjectForm: FC<newProjectFormT> = () => {
     </>
   );
 };
-
-export default NewProjectForm;

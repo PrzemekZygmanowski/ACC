@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header as HeaderComponent } from '../domain';
+import { Header as HeaderComponent } from '../domain/Header/Header';
 
 const Header = () => {
   return (

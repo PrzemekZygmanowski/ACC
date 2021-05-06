@@ -4,7 +4,7 @@ import { Button, ButtonIcon } from '../../commons';
 import { StartMenu, HeaderHelpDialog } from '..';
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 
-const Header = () => {
+export const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isHelpDialogOpen, setHelpDialogOpen] = useState(false);
   const openStartDialog = () => {
@@ -30,5 +30,3 @@ const Header = () => {
     </header>
   );
 };
-
-export default Header;

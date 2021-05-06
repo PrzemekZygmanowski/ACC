@@ -5,6 +5,9 @@ import { Header, NotFound, NewProject } from './pages';
 import { Provider } from 'react-redux';
 import store from './store';
 
+// eslint-disable-next-line no-console
+store.subscribe(() => console.log(store.getState()));
+
 export default function App() {
   return (
     <Provider store={store}>

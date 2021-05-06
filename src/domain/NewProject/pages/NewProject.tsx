@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import '../../styles/Dialog.scss';
+import '../../../styles/Dialog.scss';
 import { Dialog, Button, ButtonIcon } from '../../../commons';
-import NewProjectForm from '../components/NewProjectForm';
+import { NewProjectForm } from '../container/NewProjectForm';
 import NewRoomForm from '../components/NewRoomForm';
 import RoomList from '../container/RoomList';
-import {
-  DialogHeader,
-  DialogContent,
-  DialogFooter,
-} from '../../../commons/dialog';
+import { DialogHeader } from '../../../commons/dialog/DialogHeader';
+import { DialogContent } from '../../../commons/dialog/DialogContent';
+import { DialogFooter } from '../../../commons/dialog/DialogFooter';
 import {
   faTimesCircle,
   faQuestionCircle,

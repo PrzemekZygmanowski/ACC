@@ -1,13 +1,11 @@
 import React from 'react';
 import { HelpDialog, ButtonIcon } from '../../commons';
-import {
-  DialogHeader,
-  DialogContent,
-  DialogFooter,
-} from '../../commons/dialog/';
+import { DialogHeader } from '../../commons/dialog/DialogHeader';
+import { DialogContent } from '../../commons/dialog/DialogContent';
+import { DialogFooter } from '../../commons/dialog/DialogFooter';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
-const HeaderHelpDialog = ({ isOpen, onClick }: any) => {
+exportconst HeaderHelpDialog = ({ isOpen, onClick }: any) => {
   return (
     <HelpDialog className={`startHelpDialog startHelpDialog--active-${isOpen}`}>
       <DialogHeader title='Cześć' isButton>
@@ -38,4 +36,4 @@ const HeaderHelpDialog = ({ isOpen, onClick }: any) => {
   );
 };
 
-export default HeaderHelpDialog;
+

@@ -1,11 +1,9 @@
 import React from 'react';
 import '../../styles/Dialog.scss';
 import { Dialog, NavLink, NavMenu } from '../../commons';
-import {
-  DialogHeader,
-  DialogContent,
-  DialogFooter,
-} from '../../commons/dialog/';
+import { DialogHeader } from '../../commons/dialog/DialogHeader';
+import { DialogContent } from '../../commons/dialog/DialogContent';
+import { DialogFooter } from '../../commons/dialog/DialogFooter';
 
 const NotFound = () => {
   return (

@@ -1,9 +1,10 @@
 import React from 'react';
 import { HelpDialog, ButtonIcon } from '../../commons';
-import { DialogHeader, DialogContent } from '../../commons/dialog/';
+import { DialogHeader } from '../../commons/dialog/DialogHeader';
+import { DialogContent } from '../../commons/dialog/DialogContent';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
-const StartHelpDialog = ({ isOpen, onClick }: any) => {
+export const StartHelpDialog = ({ isOpen, onClick }: any) => {
   return (
     <HelpDialog className={`startHelpDialog startHelpDialog--active-${isOpen}`}>
       <DialogHeader title='Pomoc' isButton>
@@ -30,5 +31,3 @@ const StartHelpDialog = ({ isOpen, onClick }: any) => {
     </HelpDialog>
   );
 };
-
-export default StartHelpDialog;

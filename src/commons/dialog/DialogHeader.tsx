@@ -10,7 +10,7 @@ const IconsS: CSS.Properties = {
   right: '5%',
 };
 
-const DialogHeader = ({ title, children, isButton }: DialogHeaderT) => {
+export const DialogHeader = ({ title, children, isButton }: DialogHeaderT) => {
   return (
     <div style={DialogHeaderS}>
       <div>
@@ -20,5 +20,3 @@ const DialogHeader = ({ title, children, isButton }: DialogHeaderT) => {
     </div>
   );
 };
-
-export default DialogHeader;

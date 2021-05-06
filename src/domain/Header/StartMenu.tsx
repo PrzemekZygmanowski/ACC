@@ -3,17 +3,15 @@ import '../../styles/Dialog.scss';
 import '../../commons/MenuStyle.scss';
 import { Dialog, ButtonIcon, NavLink, NavMenu } from '../../commons';
 import { StartHelpDialog } from '..';
-import {
-  DialogHeader,
-  DialogContent,
-  DialogFooter,
-} from '../../commons/dialog/';
+import { DialogHeader } from '../../commons/dialog/DialogHeader';
+import { DialogContent } from '../../commons/dialog/DialogContent';
+import { DialogFooter } from '../../commons/dialog/DialogFooter';
 import {
   faTimesCircle,
   faQuestionCircle,
 } from '@fortawesome/free-solid-svg-icons';
 
-const StartMenu = ({ isOpen, onClick }: any) => {
+export const StartMenu = ({ isOpen, onClick }: any) => {
   const [isStartHelpDialogOpen, setStartHelpDialogOpen] = useState(false);
 
   const openStartHelpDialog = () => {
@@ -63,5 +61,3 @@ const StartMenu = ({ isOpen, onClick }: any) => {
     </Dialog>
   );
 };
-
-export default StartMenu;
