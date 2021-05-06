@@ -9,14 +9,11 @@ import {
   SubmitButton,
   Select,
 } from '../../../commons/FormComponents';
+import { ProjectValues } from '../interfaces';
 
 export interface newProjectFormT {
-  values: myFormValues;
-  onSubmit: (values: myFormValues) => void;
-}
-interface myFormValues {
-  projectTitle: string;
-  weatherStation: string;
+  values: ProjectValues;
+  onSubmit: (values: ProjectValues) => void;
 }
 
 interface cityT {
@@ -34,7 +31,7 @@ const cities = [
 ];
 
 const NewProjectForm: FC<newProjectFormT> = () => {
-  const initialValues: myFormValues = { projectTitle: '', weatherStation: '' };
+  const initialValues: ProjectValues = { projectTitle: '', weatherStation: '' };
   return (
     <>
       <Formik

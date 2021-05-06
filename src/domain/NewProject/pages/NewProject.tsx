@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import '../../styles/Dialog.scss';
-import { Dialog, Button, ButtonIcon } from '../../commons';
-import NewProjectForm from './components/NewProjectForm';
-import NewRoomForm from './components/NewRoomForm';
-import RoomList from './container/RoomList';
+import { Dialog, Button, ButtonIcon } from '../../../commons';
+import NewProjectForm from '../components/NewProjectForm';
+import NewRoomForm from '../components/NewRoomForm';
+import RoomList from '../container/RoomList';
 import {
   DialogHeader,
   DialogContent,
   DialogFooter,
-} from '../../commons/dialog/';
+} from '../../../commons/dialog';
 import {
   faTimesCircle,
   faQuestionCircle,
 } from '@fortawesome/free-solid-svg-icons';
-import Room from './components/Room';
+import Room from '../components/Room';
 
 const NewProject = () => {
   const onClick = () => {
