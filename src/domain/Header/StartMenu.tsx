@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../../styles/Dialog.scss';
 import '../../commons/MenuStyle.scss';
 import { Dialog, ButtonIcon, NavLink, NavMenu } from '../../commons';
-import { StartHelpDialog } from '..';
+import { StartHelpDialog } from './StartHelpDialog';
 import { DialogHeader } from '../../commons/dialog/DialogHeader';
 import { DialogContent } from '../../commons/dialog/DialogContent';
 import { DialogFooter } from '../../commons/dialog/DialogFooter';

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import '../../styles/Header.scss';
 import { Button, ButtonIcon } from '../../commons';
-import { StartMenu, HeaderHelpDialog } from '..';
+import { StartMenu } from './StartMenu';
+import { HeaderHelpDialog } from './HeaderHelpDialog';
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 
 export const Header = () => {

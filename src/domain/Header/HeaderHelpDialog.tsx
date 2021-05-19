@@ -5,7 +5,7 @@ import { DialogContent } from '../../commons/dialog/DialogContent';
 import { DialogFooter } from '../../commons/dialog/DialogFooter';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
-exportconst HeaderHelpDialog = ({ isOpen, onClick }: any) => {
+export const HeaderHelpDialog = ({ isOpen, onClick }: any) => {
   return (
     <HelpDialog className={`startHelpDialog startHelpDialog--active-${isOpen}`}>
       <DialogHeader title='Cześć' isButton>
@@ -35,5 +35,3 @@ exportconst HeaderHelpDialog = ({ isOpen, onClick }: any) => {
     </HelpDialog>
   );
 };
-
-
