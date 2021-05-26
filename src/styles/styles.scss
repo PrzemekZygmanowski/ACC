@@ -8,6 +8,9 @@
   width: 100%;
 
   .room {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     position: relative;
     background-color: $primaryColor;
     color: $secondaryColor;
@@ -18,25 +21,20 @@
     line-height: 32px;
     margin: 3px;
 
-    .room span {
-      padding-left: 10px;
+    span {
+      margin-left: 10px;
+    }
+
+    .room_btns {
+      margin-right: 10px;
     }
     .edit-room-btn,
     .delete-room-btn {
-      position: absolute;
-      // top: 0;
       background-color: $primaryColor;
       color: $secondaryColor;
       border: none;
       font-size: 16px;
-    }
-
-    .delete-room-btn {
-      right: 10px;
-    }
-
-    .edit-room-btn {
-      right: 30px;
+      padding: 0 5px;
     }
   }
 }

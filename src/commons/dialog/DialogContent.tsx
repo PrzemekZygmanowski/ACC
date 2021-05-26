@@ -6,7 +6,8 @@ const DialogContentS: CSS.Properties = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  justifyContent: 'space-around',
+  justifyContent: 'space-between',
+  overflow: 'scroll',
   height: '80%',
   width: '100%',
 };

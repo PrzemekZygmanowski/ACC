@@ -12,11 +12,15 @@ interface RoomT {
 const Room = ({ id, name, area, temperature }: RoomT) => {
   return (
     <li className='room'>
-      <span>{id}</span>
-      <span>{name}</span>
-      <span>{area}</span>
-      <span>{temperature}</span>
       <div>
+        {' '}
+        <span>{id}</span>
+        <span>{name}</span>
+        <span>{area}</span>
+        <span>{temperature}</span>
+      </div>
+      <div className='room_btns'>
+        {' '}
         <LinkIcon className='edit-room-btn' to='/' icon={faCog} />
         <ButtonIcon
           className='delete-room-btn'

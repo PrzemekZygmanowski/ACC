@@ -4,6 +4,7 @@ import { DialogHeaderT } from '../interfaces/interfaces';
 
 const DialogHeaderS: CSS.Properties = {
   display: 'flex',
+  // paddingBottom: '35px',
 };
 const IconsS: CSS.Properties = {
   position: 'fixed',
