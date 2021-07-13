@@ -1,4 +1,4 @@
-import { ProjectValues, NewProjectAction } from '../interfaces';
+import { ProjectValues } from '../interfaces';
 import { NEW_PROJECT } from './newProjectActions';
 import { AnyAction } from 'redux';
 

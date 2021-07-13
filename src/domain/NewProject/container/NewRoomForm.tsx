@@ -14,6 +14,8 @@ export const NewRoomForm = () => {
   const dispatch = useDispatch();
 
   const submitNewRoom = (values: RoomT) => {
+    console.log(values);
+
     dispatch(
       addNewRoom(
         values.id,

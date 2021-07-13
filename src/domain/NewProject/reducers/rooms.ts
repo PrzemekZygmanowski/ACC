@@ -11,7 +11,7 @@ export default (state: RoomsT = initialState, action: AnyAction): RoomsT => {
     case NEW_ROOM: {
       return {
         ...state,
-        rooms: [...state.rooms, action.newRoom],
+        rooms: [...state.rooms, action.payload],
       };
     }
     default:
