@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../../../styles/Dialog.scss';
 import { Dialog, Button, ButtonIcon } from '../../../commons';
 import { NewProjectForm } from '../container/NewProjectForm';
-import NewRoomForm from '../components/NewRoomForm';
+import { NewRoomForm } from '../container/NewRoomForm';
 import RoomList from '../container/RoomList';
 import { DialogHeader } from '../../../commons/dialog/DialogHeader';
 import { DialogContent } from '../../../commons/dialog/DialogContent';

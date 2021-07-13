@@ -8,16 +8,28 @@
     "@fortawesome/fontawesome-svg-core": "1.2.34",
     "@fortawesome/free-solid-svg-icons": "5.15.2",
     "@fortawesome/react-fontawesome": "0.1.14",
+    "@material-ui/core": "^4.11.3",
+    "@reduxjs/toolkit": "^1.5.1",
+    "@types/lodash-es": "^4.17.4",
     "@types/react-router-dom": "5.1.7",
+    "formik": "^2.2.6",
+    "lodash-es": "^4.17.21",
+    "node-sass": "^5.0.0",
     "react": "17.0.0",
     "react-dom": "17.0.0",
+    "react-redux": "^7.2.4",
     "react-router-dom": "5.2.0",
-    "react-scripts": "3.3.0"
+    "react-scripts": "^4.0.3",
+    "redux": "^4.1.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@types/react": "16.9.19",
     "@types/react-dom": "16.9.5",
     "typescript": "3.7.5"
+  },
+  "resolutions": {
+    "babel-loader": "8.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,5 +42,20 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "repository": "https://github.com/PrzemekZygmanowski/ACC.git",
+  "author": "Zygmanowski, Przemyslaw <przemyslaw.zygmanowski@fujitsu.com>",
+  "license": "MIT",
+  "eslintConfig": {
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  }
 }

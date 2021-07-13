@@ -1,16 +1,7 @@
 import React from 'react';
 import Room from './Room';
 import '../../../styles/styles.scss';
-
-interface RoomsT {
-  rooms: RoomT[];
-}
-interface RoomT {
-  id: number;
-  roomName: string;
-  roomArea: number;
-  roomTemperature: number;
-}
+import { RoomsT, RoomT } from '../interfaces';
 
 const RoomList = ({ rooms }: RoomsT) => {
   return (

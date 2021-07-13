@@ -8,3 +8,17 @@ export interface ProjectValues {
 export interface NewProjectAction extends Action {
   payload: ProjectValues;
 }
+
+export interface RoomsT {
+  rooms: RoomT[];
+}
+export interface RoomT {
+  id: number;
+  roomName: string;
+  roomArea: number;
+  roomTemperature: number;
+}
+
+export interface roomAction extends Action {
+  payload: RoomT;
+}

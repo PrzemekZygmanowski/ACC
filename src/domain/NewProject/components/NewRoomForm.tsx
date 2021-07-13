@@ -6,15 +6,16 @@ import {
   InputWrapper,
   SubmitButton,
 } from '../../../commons/FormComponents';
+import { RoomT } from '../interfaces';
 
-interface myFormValues {
-  roomName: string;
-  roomArea: number;
-  roomTemperature: number;
+export interface RoomFormT {
+  values: RoomT;
+  submitNewRoom: (values: RoomT) => void;
 }
 
-const NewRoomForm = () => {
-  const initialValues: myFormValues = {
+export const NewRoomForm = ({ values, submitNewRoom }: RoomFormT) => {
+  const initialValues: RoomT = {
+    id: 0,
     roomName: '',
     roomArea: 0,
     roomTemperature: 0,
@@ -26,12 +27,7 @@ const NewRoomForm = () => {
 
   return (
     <>
-      <Formik
-        initialValues={initialValues}
-        onSubmit={(values) => {
-          console.log(values);
-        }}
-      >
+      <Formik initialValues={values || initialValues} onSubmit={submitNewRoom}>
         <Form className='form_container'>
           <InputWrapper className='input_wrapper'>
             <Label label='Nazwa pomieszczenia' name='roomName' />
@@ -59,5 +55,3 @@ const NewRoomForm = () => {
     </>
   );
 };
-
-export default NewRoomForm;
