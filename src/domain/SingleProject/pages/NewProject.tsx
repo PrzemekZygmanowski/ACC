@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../../../styles/Dialog.scss';
-import { Dialog, Button, ButtonIcon } from '../../../commons';
+import { Dialog, ButtonIcon } from '../../../commons';
 import { NewProjectForm } from '../container/NewProjectForm';
 import { NewRoomForm } from '../container/NewRoomForm';
 import RoomList from '../container/RoomList';
@@ -11,13 +11,12 @@ import {
   faTimesCircle,
   faQuestionCircle,
 } from '@fortawesome/free-solid-svg-icons';
-import Room from '../components/Room';
 import { NewProjectCard } from '../container/NewProjectCard';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { State } from '../../../interfaces';
 import { ProjectValues } from '../interfaces';
 
-const NewProject = () => {
+export const NewProject = () => {
   const [isProjectProvided, setProjectProvided] = useState(false);
   const newProject = useSelector<State, ProjectValues>(
     (state) => state.newProject
@@ -62,5 +61,3 @@ const NewProject = () => {
     </Dialog>
   );
 };
-
-export default NewProject;

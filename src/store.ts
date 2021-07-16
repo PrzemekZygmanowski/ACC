@@ -4,8 +4,8 @@
 
 // export default createStore(rootReducer, devToolsEnhancer({}));
 import { configureStore } from '@reduxjs/toolkit';
-import newProjectReducer from './domain/NewProject/reducers/newProject';
-import roomsReducer from './domain/NewProject/reducers/rooms';
+import newProjectReducer from './domain/SingleProject/reducers/newProject';
+import roomsReducer from './domain/SingleProject/reducers/rooms';
 
 const store = configureStore({
   reducer: {
