@@ -2,9 +2,10 @@ import React from 'react';
 import { LinkIcon, ButtonIcon } from '../../../commons';
 import { faCog, faTrash } from '@fortawesome/free-solid-svg-icons';
 import '../../../styles/styles.scss';
+// import {RoomT} from '../interfaces'
 
 interface RoomT {
-  id: number;
+  id: string;
   name: string;
   area: number;
   temperature: number;

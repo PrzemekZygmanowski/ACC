@@ -13,7 +13,7 @@ export interface RoomsT {
   rooms: RoomT[];
 }
 export interface RoomT {
-  id: number;
+  id: string;
   roomName: string;
   roomArea: number;
   roomTemperature: number;

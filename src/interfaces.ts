@@ -1,5 +1,5 @@
 import React, { Reducer } from 'react';
-import { ProjectValues } from './domain/NewProject/interfaces';
+import { ProjectValues, RoomsT } from './domain/NewProject/interfaces';
 
 export interface Module {
   // the "named" reducer: example: {domain: (state:State = initialState, action:Action):State=>{...}}
@@ -8,4 +8,5 @@ export interface Module {
 
 export interface State {
   newProject: ProjectValues;
+  rooms: RoomsT;
 }

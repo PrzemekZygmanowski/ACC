@@ -3,10 +3,11 @@ import { NewRoomForm as NewRoomFormComponent } from '../components/NewRoomForm';
 import { useDispatch } from 'react-redux';
 import { addNewRoom } from '../reducers/roomsActions';
 import { RoomT } from '../interfaces';
+import { v4 as uuid4v } from 'uuid';
 
 export const NewRoomForm = () => {
   const [roomData, setRoomData] = useState({
-    id: 0,
+    id: '',
     roomName: '',
     roomArea: 0,
     roomTemperature: 0,
@@ -14,18 +15,18 @@ export const NewRoomForm = () => {
   const dispatch = useDispatch();
 
   const submitNewRoom = (values: RoomT) => {
-    console.log(values);
+    const roomId = uuid4v();
 
     dispatch(
       addNewRoom(
-        values.id,
+        roomId,
         values.roomName,
         values.roomArea,
         values.roomTemperature
       )
     );
     setRoomData({
-      id: values.id,
+      id: roomId,
       roomName: values.roomName,
       roomArea: values.roomArea,
       roomTemperature: values.roomTemperature,

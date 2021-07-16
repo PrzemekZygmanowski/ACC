@@ -15,7 +15,7 @@ export interface RoomFormT {
 
 export const NewRoomForm = ({ values, submitNewRoom }: RoomFormT) => {
   const initialValues: RoomT = {
-    id: 0,
+    id: '',
     roomName: '',
     roomArea: 0,
     roomTemperature: 0,

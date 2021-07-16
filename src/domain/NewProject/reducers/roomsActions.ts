@@ -3,7 +3,7 @@ import { roomAction } from '../interfaces';
 export const NEW_ROOM = 'NEW_ROOM';
 
 export const addNewRoom = (
-  id: number,
+  id: string,
   roomName: string,
   roomArea: number,
   roomTemperature: number
