@@ -1,4 +1,4 @@
-import { NEW_ROOM } from './roomsActions';
+import { NEW_ROOM, DELETE_ROOM } from './roomsActions';
 import { AnyAction } from 'redux';
 import { RoomsT } from '../interfaces';
 
@@ -12,6 +12,11 @@ export default (state: RoomsT = initialState, action: AnyAction): RoomsT => {
       return {
         ...state,
         rooms: [...state.rooms, action.payload],
+      };
+    }
+    case DELETE_ROOM: {
+      return {
+        rooms: [...state.rooms.filter((room) => room.id !== action.payload)],
       };
     }
     default:

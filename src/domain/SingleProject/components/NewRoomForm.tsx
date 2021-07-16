@@ -21,10 +21,6 @@ export const NewRoomForm = ({ values, submitNewRoom }: RoomFormT) => {
     roomTemperature: 0,
   };
 
-  const valuetext = (value: number) => {
-    return `${value}°C`;
-  };
-
   return (
     <>
       <Formik initialValues={values || initialValues} onSubmit={submitNewRoom}>

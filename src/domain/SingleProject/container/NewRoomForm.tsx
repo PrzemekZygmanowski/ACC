@@ -15,7 +15,7 @@ export const NewRoomForm = () => {
   const dispatch = useDispatch();
 
   const submitNewRoom = (values: RoomT) => {
-    const roomId = uuid4v();
+    const roomId = uuid4v().slice(0, 3);
 
     dispatch(
       addNewRoom(

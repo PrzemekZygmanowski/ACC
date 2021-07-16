@@ -2,15 +2,22 @@ import React from 'react';
 import { LinkIcon, ButtonIcon } from '../../../commons';
 import { faCog, faTrash } from '@fortawesome/free-solid-svg-icons';
 import '../../../styles/styles.scss';
-// import {RoomT} from '../interfaces'
+import { deleteRoom } from '../reducers/roomsActions';
+import { useDispatch } from 'react-redux';
 
-interface RoomT {
+interface RoomLiElement {
   id: string;
   name: string;
-  area: number;
-  temperature: number;
+  area: string;
+  temperature: string;
 }
-const Room = ({ id, name, area, temperature }: RoomT) => {
+
+const Room = ({ id, name, area, temperature }: RoomLiElement) => {
+  const dispatch = useDispatch();
+  const handleDelete = (id: string) => {
+    dispatch(deleteRoom(id));
+  };
+
   return (
     <li className='room'>
       <div>
@@ -25,9 +32,7 @@ const Room = ({ id, name, area, temperature }: RoomT) => {
         <LinkIcon className='edit-room-btn' to='/' icon={faCog} />
         <ButtonIcon
           className='delete-room-btn'
-          onClick={() => {
-            console.log('usun');
-          }}
+          onClick={() => handleDelete(id)}
           icon={faTrash}
         />
       </div>

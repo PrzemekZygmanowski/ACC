@@ -1,6 +1,7 @@
 import { roomAction } from '../interfaces';
 
 export const NEW_ROOM = 'NEW_ROOM';
+export const DELETE_ROOM = 'DELETE_ROOM';
 
 export const addNewRoom = (
   id: string,
@@ -16,5 +17,12 @@ export const addNewRoom = (
       roomArea: roomArea,
       roomTemperature: roomTemperature,
     },
+  };
+};
+
+export const deleteRoom = (id: string) => {
+  return {
+    type: DELETE_ROOM,
+    payload: id,
   };
 };

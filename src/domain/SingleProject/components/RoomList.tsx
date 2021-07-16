@@ -4,6 +4,13 @@ import '../../../styles/styles.scss';
 import { RoomsT, RoomT } from '../interfaces';
 
 const RoomList = ({ rooms }: RoomsT) => {
+  const areaFormat = (area: number) => {
+    return `${area}m kw.`;
+  };
+
+  const tempFormat = (temp: number) => {
+    return `${temp}°C`;
+  };
   console.log(rooms);
 
   return (
@@ -13,10 +20,10 @@ const RoomList = ({ rooms }: RoomsT) => {
           return (
             <Room
               key={room.id}
-              id={room.id.slice(0, 3)}
+              id={room.id}
               name={room.roomName}
-              area={room.roomArea}
-              temperature={room.roomTemperature}
+              area={areaFormat(room.roomArea)}
+              temperature={tempFormat(room.roomTemperature)}
             />
           );
         })}
