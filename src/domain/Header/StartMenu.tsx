@@ -43,7 +43,7 @@ export const StartMenu = ({ isOpen, onClick }: any) => {
           <NavLink
             className='linkBtn'
             label='Stwórz projekt'
-            to='/newProject'
+            to='/singleproject'
           />
         </NavMenu>
       </DialogContent>

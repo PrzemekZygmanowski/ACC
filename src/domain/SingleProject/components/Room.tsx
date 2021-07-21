@@ -29,7 +29,7 @@ const Room = ({ id, name, area, temperature }: RoomLiElement) => {
       </div>
       <div className='room_btns'>
         {' '}
-        <LinkIcon className='edit-room-btn' to='/' icon={faCog} />
+        <LinkIcon className='edit-room-btn' to={`/room/${id}`} icon={faCog} />
         <ButtonIcon
           className='delete-room-btn'
           onClick={() => handleDelete(id)}

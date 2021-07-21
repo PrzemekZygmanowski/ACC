@@ -19,6 +19,7 @@ export default (state: RoomsT = initialState, action: AnyAction): RoomsT => {
         rooms: [...state.rooms.filter((room) => room.id !== action.payload)],
       };
     }
+
     default:
       return state;
   }
