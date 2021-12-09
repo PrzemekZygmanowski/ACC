@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import '../../styles/Header.scss';
-import { Button, ButtonIcon } from '../../commons';
-import { StartMenu } from './StartMenu';
+import { Button} from '../../commons/Button';
+import {  ButtonIcon } from '../../commons/ButtonIcon';
+import {  Link} from '../../commons/NavLink';
+import { NavMenu } from '../../commons/NavMenu';
 import { HeaderHelpDialog } from './HeaderHelpDialog';
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 
 export const Header = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
   const [isHelpDialogOpen, setHelpDialogOpen] = useState(false);
-  const openStartDialog = () => {
-    setMenuOpen(!isMenuOpen);
-  };
+
   const openHelpDialog = () => {
     setHelpDialogOpen(!isHelpDialogOpen);
   };
@@ -18,15 +17,18 @@ export const Header = () => {
     <header className='header'>
       <h1 className='header__h1'>Kalkulator Zysków Ciepła</h1>
       <h2 className='header__h2'>
+  
         Oblicz jaką moc powinien mieć Twój klimatyzator
-      </h2>
-      <Button className='mainBtn' label='Zaczynamy' onClick={openStartDialog} />
+        </h2>
+        <NavMenu className='startMenu'>
+          <Link className='linkBtn' label='Zaczynamy' to='/start' />
+          </NavMenu>
+    
       <ButtonIcon
         className='iconBtn'
         onClick={openHelpDialog}
         icon={faQuestionCircle}
       />
-      <StartMenu isOpen={isMenuOpen} onClick={openStartDialog} />
       <HeaderHelpDialog isOpen={isHelpDialogOpen} onClick={openHelpDialog} />
     </header>
   );

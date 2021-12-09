@@ -1,7 +1,7 @@
 import React from 'react';
 import { SubmitT } from '../interfaces/interfaces';
 
-const Button = ({ className, type, label }: SubmitT) => {
+export const SubmitButton = ({ className, type, label }: SubmitT) => {
   return (
     <button className={className} type={type}>
       {label}
@@ -9,4 +9,3 @@ const Button = ({ className, type, label }: SubmitT) => {
   );
 };
 
-export default Button;

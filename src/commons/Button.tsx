@@ -1,7 +1,7 @@
 import React from 'react';
 import { ButtonT } from './interfaces/interfaces';
 
-const Button = ({ className, onClick, label }: ButtonT) => {
+export const Button = ({ className, onClick, label }: ButtonT) => {
   return (
     <button className={className} onClick={onClick}>
       {label}
@@ -9,4 +9,3 @@ const Button = ({ className, onClick, label }: ButtonT) => {
   );
 };
 
-export default Button;

@@ -7,24 +7,24 @@ const DialogStyle: CSS.Properties = {
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "space-between",
-  position: "absolute",
+  position: "relative",
   backgroundColor: "#fff",
   boxShadow: "2px 2px 5px rgba(0,0,0,0.5)",
   padding: "3%",
   width: "90vw",
+  maxWidth: '800px',
   height: "90vh",
+  margin: '0 auto',
   top: "5%",
-  left: "5%",
   bottom: "5%",
   borderRadius: "10px",
   transition: "0.3s ease-in-out"
 };
 
-const Dialog = ({ className, children }: DialogT) => {
+export const Dialog = ({ className, children }: DialogT) => {
   return (
     <div style={DialogStyle} className={className}>
       {children}
     </div>
   );
 };
-export default Dialog;

@@ -1,5 +1,6 @@
 import React from 'react';
-import { HelpDialog, ButtonIcon } from '../../commons';
+import { HelpDialog } from '../../commons/HelpDialog';
+import {  ButtonIcon } from '../../commons/ButtonIcon';
 import { DialogHeader } from '../../commons/dialog/DialogHeader';
 import { DialogContent } from '../../commons/dialog/DialogContent';
 import { DialogFooter } from '../../commons/dialog/DialogFooter';

@@ -3,12 +3,21 @@ import '../../../commons/MenuStyle.scss';
 import '../../../styles/Form.scss';
 import { Formik, Form } from 'formik';
 import {
-  Input,
-  Label,
-  InputWrapper,
-  SubmitButton,
+
   Select,
-} from '../../../commons/FormComponents';
+} from '../../../commons/FormComponents/Select';
+import {
+  Input,
+} from '../../../commons/FormComponents/Input';
+import {
+  Label,
+} from '../../../commons/FormComponents/Label';
+import {
+  InputWrapper,
+} from '../../../commons/FormComponents/InputWrapper';
+import {
+  SubmitButton
+} from '../../../commons/FormComponents/SubmitButton';
 import { ProjectValues } from '../interfaces';
 
 export interface newProjectFormT {

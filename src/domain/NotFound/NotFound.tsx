@@ -1,11 +1,13 @@
 import React from 'react';
 import '../../styles/Dialog.scss';
-import { Dialog, NavLink, NavMenu } from '../../commons';
+import { Dialog, } from '../../commons/Dialog';
+import {  Link } from '../../commons/NavLink';
+import {  NavMenu } from '../../commons/NavMenu';
 import { DialogHeader } from '../../commons/dialog/DialogHeader';
 import { DialogContent } from '../../commons/dialog/DialogContent';
 import { DialogFooter } from '../../commons/dialog/DialogFooter';
 
-const NotFound = () => {
+export const NotFound = () => {
   return (
     <Dialog className='startDialog'>
       <DialogHeader title='Ups...' isButton={false} />
@@ -15,10 +17,9 @@ const NotFound = () => {
       <DialogFooter>
         <NavMenu className=''>
           {' '}
-          <NavLink className='mainBtn' label='Powrót' to='/' />
+          <Link className='mainBtn' label='Powrót' to='/' />
         </NavMenu>
       </DialogFooter>
     </Dialog>
   );
 };
-export default NotFound;

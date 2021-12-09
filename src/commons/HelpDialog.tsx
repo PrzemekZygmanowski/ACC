@@ -17,11 +17,10 @@ const HelpDialogS: CSS.Properties = {
   transition: "0.3s ease-in-out"
 };
 
-const HelpDialog = ({ className, children }: DialogT) => {
+export const HelpDialog = ({ className, children }: DialogT) => {
   return (
     <div style={HelpDialogS} className={className}>
       {children}
     </div>
   );
 };
-export default HelpDialog;

@@ -2,10 +2,16 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import {
   Input,
+} from '../../../commons/FormComponents/Input';
+import {
   Label,
+} from '../../../commons/FormComponents/Label';
+import {
   InputWrapper,
-  SubmitButton,
-} from '../../../commons/FormComponents';
+} from '../../../commons/FormComponents/InputWrapper';
+import {
+  SubmitButton
+} from '../../../commons/FormComponents/SubmitButton';
 import { RoomT } from '../interfaces';
 
 export interface RoomFormT {

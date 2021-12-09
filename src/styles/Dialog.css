@@ -1,0 +1,10 @@
+.startDialog--active-false, .startHelpDialog--active-false {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.startDialog--active-true, .startHelpDialog--active-true {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+/*# sourceMappingURL=Dialog.css.map */

@@ -17,7 +17,7 @@ export const DialogHeader = ({ title, children, isButton }: DialogHeaderT) => {
       <div>
         <h2>{title}</h2>
       </div>
-      {isButton ? <div style={IconsS}>{children}</div> : <></>}
+      {isButton && <div style={IconsS}>{children}</div> }
     </div>
   );
 };

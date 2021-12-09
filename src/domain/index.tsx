@@ -1,5 +1,5 @@
 ///////////////////404-NOT FOUND//////////////////
-export { default as NotFound } from './NotFound/NotFound';
+// export { default as NotFound } from './NotFound/NotFound';
 
 import { Module } from '../interfaces';
 import newProject from './SingleProject/index';

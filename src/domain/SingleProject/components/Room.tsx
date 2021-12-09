@@ -1,5 +1,6 @@
 import React from 'react';
-import { LinkIcon, ButtonIcon } from '../../../commons';
+import { LinkIcon } from '../../../commons/LinkIcon';
+import { ButtonIcon } from '../../../commons/ButtonIcon';
 import { faCog, faTrash } from '@fortawesome/free-solid-svg-icons';
 import '../../../styles/styles.scss';
 import { deleteRoom } from '../reducers/roomsActions';
@@ -12,7 +13,7 @@ interface RoomLiElement {
   temperature: string;
 }
 
-const Room = ({ id, name, area, temperature }: RoomLiElement) => {
+export const Room = ({ id, name, area, temperature }: RoomLiElement) => {
   const dispatch = useDispatch();
   const handleDelete = (id: string) => {
     dispatch(deleteRoom(id));
@@ -40,4 +41,3 @@ const Room = ({ id, name, area, temperature }: RoomLiElement) => {
   );
 };
 
-export default Room;

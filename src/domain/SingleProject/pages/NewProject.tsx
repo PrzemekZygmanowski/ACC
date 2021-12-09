@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../../../styles/Dialog.scss';
-import { Dialog, ButtonIcon } from '../../../commons';
+import {  ButtonIcon } from '../../../commons/ButtonIcon';
+import { Dialog  } from '../../../commons/Dialog';
+
 import { NewProjectForm } from '../container/NewProjectForm';
 import { NewRoomForm } from '../container/NewRoomForm';
 import RoomList from '../container/RoomList';

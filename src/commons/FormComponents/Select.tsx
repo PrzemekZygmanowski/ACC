@@ -2,7 +2,7 @@ import { useField, FieldHookConfig, FieldProps } from 'formik';
 import React from 'react';
 
 //////////fixme => dont use any///////////
-const Select = ({ ...props }: any) => {
+export const Select = ({ ...props }: any) => {
   const [field, meta] = useField(props);
   return (
     <>
@@ -14,4 +14,3 @@ const Select = ({ ...props }: any) => {
   );
 };
 
-export default Select;

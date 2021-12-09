@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import '../../styles/Dialog.scss';
 import '../../commons/MenuStyle.scss';
-import { Dialog, ButtonIcon, NavLink, NavMenu } from '../../commons';
+import { Dialog} from '../../commons/Dialog';
+import {  ButtonIcon } from '../../commons/ButtonIcon';
+import {  Link} from '../../commons/NavLink';
+import { NavMenu } from '../../commons/NavMenu';
 import { StartHelpDialog } from './StartHelpDialog';
 import { DialogHeader } from '../../commons/dialog/DialogHeader';
 import { DialogContent } from '../../commons/dialog/DialogContent';
@@ -22,7 +25,7 @@ export const StartMenu = ({ isOpen, onClick }: any) => {
   };
 
   return (
-    <Dialog className={`startDialog startDialog--active-${isOpen}`}>
+    <Dialog className={`startDialog `}>
       <DialogHeader title='Zaczynamy' isButton>
         <ButtonIcon
           className='iconBtn'
@@ -34,13 +37,13 @@ export const StartMenu = ({ isOpen, onClick }: any) => {
         <NavMenu className='startMenu'>
           <h3>Zaloguj się</h3>
           <p>Jeśli chcesz korzystać ze wszystkich dobrodziejstw aplikacji</p>
-          <NavLink className='linkBtn' label='Zaloguj się' to='/logIn' />
+          <Link className='linkBtn' label='Zaloguj się' to='/logIn' />
           <h3>Zarejestruj się</h3>
           <p>Jeżeli nigdy tego nie robiłeś</p>
-          <NavLink className='linkBtn' label='Zarejestruj się' to='/signUp' />
+          <Link className='linkBtn' label='Zarejestruj się' to='/signUp' />
           <h3>Stwórz projekt</h3>
           <p>Jeżeli chcesz szybko coś policzyć</p>
-          <NavLink
+          <Link
             className='linkBtn'
             label='Stwórz projekt'
             to='/singleproject'

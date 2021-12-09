@@ -3,7 +3,7 @@ import { NewProjectCard as NewProjectCardComponent } from '../components/NewProj
 import { useDispatch, useSelector } from 'react-redux';
 import { State } from '../../../interfaces';
 import { ProjectValues } from '../interfaces';
-import { Button } from '../../../commons';
+import { Button } from '../../../commons/Button';
 import { setNewProject } from '../reducers/newProjectActions';
 
 export const NewProjectCard = () => {
