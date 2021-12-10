@@ -1,10 +1,10 @@
-import React from 'react';
-import { LinkIcon } from '../../../commons/LinkIcon';
-import { ButtonIcon } from '../../../commons/ButtonIcon';
-import { faCog, faTrash } from '@fortawesome/free-solid-svg-icons';
-import '../../../styles/styles.scss';
-import { deleteRoom } from '../reducers/roomsActions';
-import { useDispatch } from 'react-redux';
+import React from "react";
+import { LinkIcon } from "../../../commons/LinkIcon";
+import { ButtonIcon } from "../../../commons/ButtonIcon";
+import { faCog, faTrash } from "@fortawesome/free-solid-svg-icons";
+import "../../../styles/styles.scss";
+import { deleteRoom } from "../reducers/roomsActions";
+import { useDispatch } from "react-redux";
 
 interface RoomLiElement {
   id: string;
@@ -20,19 +20,19 @@ export const Room = ({ id, name, area, temperature }: RoomLiElement) => {
   };
 
   return (
-    <li className='room'>
+    <li className="room">
       <div>
-        {' '}
+        {" "}
         <span>{id}</span>
         <span>{name}</span>
         <span>{area}</span>
         <span>{temperature}</span>
       </div>
-      <div className='room_btns'>
-        {' '}
-        <LinkIcon className='edit-room-btn' to={`/room/${id}`} icon={faCog} />
+      <div className="room_btns">
+        {" "}
+        <LinkIcon className="edit-room-btn" to={`/room/${id}`} icon={faCog} />
         <ButtonIcon
-          className='delete-room-btn'
+          className="delete-room-btn"
           onClick={() => handleDelete(id)}
           icon={faTrash}
         />
@@ -40,4 +40,3 @@ export const Room = ({ id, name, area, temperature }: RoomLiElement) => {
     </li>
   );
 };
-

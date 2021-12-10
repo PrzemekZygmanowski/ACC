@@ -1,18 +1,10 @@
-import React from 'react';
-import { Formik, Form } from 'formik';
-import {
-  Input,
-} from '../../../commons/FormComponents/Input';
-import {
-  Label,
-} from '../../../commons/FormComponents/Label';
-import {
-  InputWrapper,
-} from '../../../commons/FormComponents/InputWrapper';
-import {
-  SubmitButton
-} from '../../../commons/FormComponents/SubmitButton';
-import { RoomT } from '../interfaces';
+import React from "react";
+import { Formik, Form } from "formik";
+import { Input } from "../../../commons/FormComponents/Input";
+import { Label } from "../../../commons/FormComponents/Label";
+import { InputWrapper } from "../../../commons/FormComponents/InputWrapper";
+import { SubmitButton } from "../../../commons/FormComponents/SubmitButton";
+import { RoomT } from "../interfaces";
 
 export interface RoomFormT {
   values: RoomT;
@@ -21,8 +13,8 @@ export interface RoomFormT {
 
 export const NewRoomForm = ({ values, submitNewRoom }: RoomFormT) => {
   const initialValues: RoomT = {
-    id: '',
-    roomName: '',
+    id: "",
+    roomName: "",
     roomArea: 0,
     roomTemperature: 0,
   };
@@ -30,28 +22,28 @@ export const NewRoomForm = ({ values, submitNewRoom }: RoomFormT) => {
   return (
     <>
       <Formik initialValues={values || initialValues} onSubmit={submitNewRoom}>
-        <Form className='form_container'>
-          <InputWrapper className='input_wrapper'>
-            <Label label='Nazwa pomieszczenia' name='roomName' />
+        <Form className="form_container">
+          <InputWrapper className="input_wrapper">
+            <Label label="Nazwa pomieszczenia" name="roomName" />
             <Input
-              name='roomName'
-              type='text'
-              placeholder='Nazwa pomieszczenia'
+              name="roomName"
+              type="text"
+              placeholder="Nazwa pomieszczenia"
             />
           </InputWrapper>
-          <InputWrapper className='input_wrapper'>
-            <Label label='Powierzchnia' name='roomArea' />
-            <Input name='roomArea' type='number' placeholder='Powierzchnia' />
+          <InputWrapper className="input_wrapper">
+            <Label label="Powierzchnia" name="roomArea" />
+            <Input name="roomArea" type="number" placeholder="Powierzchnia" />
           </InputWrapper>
-          <InputWrapper className='input_wrapper'>
-            <Label label='Temperatura' name='roomTemperature' />
+          <InputWrapper className="input_wrapper">
+            <Label label="Temperatura" name="roomTemperature" />
             <Input
-              name='roomTemperature'
-              type='number'
-              placeholder='Temperatura'
+              name="roomTemperature"
+              type="number"
+              placeholder="Temperatura"
             />
           </InputWrapper>
-          <SubmitButton className='submitBtn' type='submit' label='Zapisz' />
+          <SubmitButton className="submitBtn" type="submit" label="Zapisz" />
         </Form>
       </Formik>
     </>

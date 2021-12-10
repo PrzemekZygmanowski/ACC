@@ -1,5 +1,5 @@
-import React from 'react';
-import { ProjectValues } from '../interfaces';
+import React from "react";
+import { ProjectValues } from "../interfaces";
 
 export interface newProjectT {
   nameLabel: string;

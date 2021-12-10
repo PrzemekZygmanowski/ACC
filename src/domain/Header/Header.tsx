@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../../styles/Header.scss';
-import { Button} from '../../commons/Button';
 import {  ButtonIcon } from '../../commons/ButtonIcon';
 import {  Link} from '../../commons/NavLink';
 import { NavMenu } from '../../commons/NavMenu';
