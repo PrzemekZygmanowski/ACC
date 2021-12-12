@@ -1,23 +1,24 @@
-import React from 'react';
-import { HelpDialog } from '../../commons/HelpDialog';
-import {  ButtonIcon } from '../../commons/ButtonIcon';
-import { DialogHeader } from '../../commons/dialog/DialogHeader';
-import { DialogContent } from '../../commons/dialog/DialogContent';
-import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import React from "react";
+import { HelpDialog } from "../../commons/HelpDialog";
+import { ButtonIcon } from "../../commons/ButtonIcon";
+import { DialogHeader } from "../../commons/dialog/DialogHeader";
+import { DialogContent } from "../../commons/dialog/DialogContent";
+import { Link } from "../../commons/NavLink";
+import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 
 export const StartHelpDialog = ({ isOpen, onClick }: any) => {
   return (
     <HelpDialog className={`startHelpDialog startHelpDialog--active-${isOpen}`}>
-      <DialogHeader title='Pomoc' isButton>
-        {' '}
+      <DialogHeader title="Pomoc" isButton>
+        {" "}
         <ButtonIcon
-          className='iconBtn'
+          className="iconBtn"
           onClick={onClick}
           icon={faTimesCircle}
         />
       </DialogHeader>
       <DialogContent>
-        {' '}
+        {" "}
         <p>
           W tej chwili jedyną dostępną opcją kalkulatora jest stworzenie
           pojedynczego projektu. Nad pozostałymi opcjami pracuje cały czas. W

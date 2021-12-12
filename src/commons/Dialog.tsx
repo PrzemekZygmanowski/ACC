@@ -12,13 +12,13 @@ const DialogStyle: CSS.Properties = {
   boxShadow: "2px 2px 5px rgba(0,0,0,0.5)",
   padding: "3%",
   width: "90vw",
-  maxWidth: '800px',
+  maxWidth: "800px",
   height: "90vh",
-  margin: '0 auto',
-  top: "5%",
-  bottom: "5%",
+  margin: "0 auto",
+  top: "5vh",
+  bottom: "5vh",
   borderRadius: "10px",
-  transition: "0.3s ease-in-out"
+  transition: "0.3s ease-in-out",
 };
 
 export const Dialog = ({ className, children }: DialogT) => {

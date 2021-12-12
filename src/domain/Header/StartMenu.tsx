@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../../styles/Dialog.scss";
 import "../../commons/MenuStyle.scss";
 import { Dialog } from "../../commons/Dialog";
@@ -14,14 +15,14 @@ import {
   faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
-export const StartMenu = ({ isOpen, onClick }: any) => {
+export const StartMenu = () => {
   const [isStartHelpDialogOpen, setStartHelpDialogOpen] = useState(false);
-
+  const navigate = useNavigate();
   const openStartHelpDialog = () => {
     setStartHelpDialogOpen(!isStartHelpDialogOpen);
   };
-  const openDialog = () => {
-    console.log("open dialog");
+  const navigateToPrevPage = () => {
+    navigate(-1);
   };
 
   return (
@@ -29,7 +30,7 @@ export const StartMenu = ({ isOpen, onClick }: any) => {
       <DialogHeader title="Zaczynamy" isButton>
         <ButtonIcon
           className="iconBtn"
-          onClick={onClick}
+          onClick={navigateToPrevPage}
           icon={faTimesCircle}
         />
       </DialogHeader>
